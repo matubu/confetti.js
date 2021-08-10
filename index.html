@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body style="display: grid; place-items: center;">
+	<button id="demo">Hello world</button>
+	<script src="confetti.js"></script>
+	<script>
+		// Pass in the id of an element
+		let confetti = new Confetti('demo');
+
+		// Edit given parameters
+		confetti.setCount(300);
+		confetti.setSize(3);
+		confetti.setPower(20);
+	</script>
+</body>
+</html>
