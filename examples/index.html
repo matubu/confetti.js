@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="syntax.css">
+
+
+
+	<link rel="stylesheet" href="highlight/styles/atom-one-dark.min.css">
+	<link rel="stylesheet" href="prism.css">
+	<head>
+<body>
+	<div>
+		<h1>
+			confetti<em>.js</em>
+		</h1>
+		fast small simple customizable
+		<div class="demo-group">
+			<pre><code>//create a instance of the class
+const confetti = new Confetti('demo');
+hello
+/*
+setting properties
+*/
+cconst ;
+Nan;
+NaN;
+true ;
+undefined ;
+'hel
+lo';
+"hello";
+`he\nel
+o${js}`;
+`heel
+o${let i = 5; error()}`;
+js.if ;
+9e5;
+9e5.8e9;
+/regex/g
+/(str|e)(\/\2)*.+$/
+9.5;
+let func = () => ();
+func 	();
+js.catch() ;
+confetti.count
+=
+75;
+confetti.size = 1;
+confetti.power = 25;
+confetti.removeFunc = elm => {
+	elm.style.visibility = 'hidden';
+	elm.style.opacity = 0;
+	setTimeout(e => {
+		elm.style.visibility = null;
+		elm.style.opacity = 1
+	}, 5000);
+};</code></pre>
+			<pre class="language-js prism"><code>//create a instance of the class
+const confetti = new Confetti('demo');
+hello
+/*
+setting properties
+*/
+cconst ;
+Nan;
+NaN;
+true ;
+undefined ;
+'hel
+lo';
+"hello";
+`he\nel
+o${js}`;
+`heel
+o${let i = 5; error()}`;
+js.if ;
+9e5;
+9e5.8e9;
+/regex/g
+/(str|e)(\/\2)*.+$/
+9.5;
+let func = () => ();
+func 	();
+js.catch() ;
+confetti.count
+=
+75;
+confetti.size = 1;
+confetti.power = 25;
+confetti.removeFunc = elm => {
+	elm.style.visibility = 'hidden';
+	elm.style.opacity = 0;
+	setTimeout(e => {
+		elm.style.visibility = null;
+		elm.style.opacity = 1
+	}, 5000);
+};</code></pre>
+<pre class="language-javascript highlight"><code>//create a instance of the class
+const confetti = new Confetti('demo');
+hello
+/*
+setting properties
+*/
+cconst ;
+Nan;
+NaN;
+true ;
+undefined ;
+'hel
+lo';
+"hello";
+`he\nel
+o${js}`;
+`heel
+o${let i = 5; error()}`;
+js.if ;
+9e5;
+9e5.8e9;
+/regex/g
+/(str|e)(\/\2)*.+$/
+9.5;
+let func = () => ();
+func 	();
+js.catch() ;
+confetti.count
+=
+75;
+confetti.size = 1;
+confetti.power = 25;
+confetti.removeFunc = elm => {
+	elm.style.visibility = 'hidden';
+	elm.style.opacity = 0;
+	setTimeout(e => {
+		elm.style.visibility = null;
+		elm.style.opacity = 1
+	}, 5000);
+};</code></pre>
+			<button class="demo-button" id="demo"><img src="cursor.svg"></button>
+		</div>
+		<div class="demo-group">
+			<pre><code>const heart = new Image(),
+	love = document.querySelector('#love');
+let confetti;
+
+heart.onload = () => {
+	confetti = new Confetti();
+	confetti.canvas.style.zIndex = -1;
+	confetti.count = 25;
+	confetti.setImage(heart, 20, 20);
+}
+
+heart.src = 'heart.png';
+love.addEventListener('click', e => {
+	if (love.classList.toggle('love'))
+		confetti?.startAt?.(e.clientX, e.clientY);
+});</code></pre>
+			<pre class="language-js prism"><code>const heart = new Image(),
+	love = document.querySelector('#love');
+let confetti;
+
+heart.onload = () => {
+	confetti = new Confetti();
+	confetti.canvas.style.zIndex = -1;
+	confetti.count = 25;
+	confetti.setImage(heart, 20, 20);
+}
+
+heart.src = 'heart.png';
+love.addEventListener('click', e => {
+	if (love.classList.toggle('love'))
+		confetti?.startAt?.(e.clientX, e.clientY);
+});</code></pre>
+<pre class="language-javascript highlight"><code>const heart = new Image(),
+	love = document.querySelector('#love');
+let confetti;
+
+heart.onload = () => {
+	confetti = new Confetti();
+	confetti.canvas.style.zIndex = -1;
+	confetti.count = 25;
+	confetti.setImage(heart, 20, 20);
+}
+
+heart.src = 'heart.png';
+love.addEventListener('click', e => {
+	if (love.classList.toggle('love'))
+		confetti?.startAt?.(e.clientX, e.clientY);
+});</code></pre>
+			<button class="demo-button" id="love"><img src="cursor.svg"></button>
+		</div>
+		<button class="demo-button" id="star"><img src="cursor.svg"></button>
+		<button>see on github</button>
+		<button>download</button>
+	</div>
+	<script src="../src/confetti.js"></script>
+	<script src="syntax.js"></script>
+
+
+	<script src="prism.js"></script>
+	<script src="highlight/highlight.js"></script>
+	<script src="highlight/languages/javascript.min.js"></script>
+	<script>
+		const heart = new Image(),
+			loveElm = document.querySelector('#love');
+		let loveEffect;
+		heart.onload = () => {
+			loveEffect = new Confetti();
+			loveEffect.canvas.style.zIndex = -1;
+			loveEffect.count = 25;
+			loveEffect.setImage(heart, 20, 20);
+		}
+		heart.src = 'heart.png';
+		loveElm.addEventListener('click', e =>
+			loveElm.classList.toggle('love')
+				&& loveEffect?.startAt?.(e.clientX, e.clientY)
+		);
+
+		let confetti = new Confetti('demo');
+		confetti.count = 75;
+		confetti.size = 1;
+		confetti.power = 25;
+		confetti.removeFunc = elm => {
+			elm.style.visibility = 'hidden';
+			elm.style.opacity = 0;
+			setTimeout(e => (elm.style.visibility = null, elm.style.opacity = 1), 5000);
+		};
+
+		document.querySelectorAll('pre:not(.language-js, .language-javascript) > code').forEach(elm => highlight_js(elm));
+		document.querySelectorAll('pre.language-js.prism').forEach(elm => Prism.highlightElement(elm));
+		document.querySelectorAll('pre.language-javascript.highlight > code').forEach(elm => hljs.highlightElement(elm));
+	</script>
+</body>
+</html>
