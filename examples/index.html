@@ -8,13 +8,9 @@
 	<link rel="stylesheet" href="https://unpkg.com/speed_highlight_js/dist/themes/atom-dark.css">
 </head>
 <body>
-	<div>
-		<h1>
-			confetti<em>.js</em>
-		</h1>
-		fast small simple customizable
-		<div class="shj-lang-js shj-mode-noheader">
-			<pre><code>//create a instance of the class
+	<h1>confetti<em>.js</em></h1>
+	<p>fast small simple customizable</p>
+	<div class="shj-lang-js shj-mode-noheader">//create a instance of the class
 const confetti = new Confetti('demo');
 /*
 setting properties
@@ -29,12 +25,10 @@ confetti.removeFunc = elm => {
 		elm.style.visibility = null;
 		elm.style.opacity = 1
 	}, 5000);
-};</code></pre>
-			<button class="demo-button" id="demo"><img src="cursor.svg"></button>
-		</div>
-		<div class="shj-lang-js shj-mode-noheader">
-			<pre><code>const heart = new Image(),
-	love = document.querySelector('#love');
+};</div>
+	<button class="demo-button" id="demo"><img src="cursor.svg"></button>
+	<div class="shj-lang-js shj-mode-noheader">const heart = new Image(),
+love = document.querySelector('#love');
 let confetti;
 
 heart.onload = () => {
@@ -48,7 +42,7 @@ heart.src = 'heart.png';
 love.addEventListener('click', e => {
 	if (love.classList.toggle('love'))
 		confetti?.startAt?.(e.clientX, e.clientY);
-});</code></pre>
+});</div>
 	<script type="module">
 		import { highlightAll } from 'https://unpkg.com/speed_highlight_js/dist/index.js'
 		highlightAll();
