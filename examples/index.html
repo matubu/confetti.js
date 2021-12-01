@@ -26,7 +26,6 @@ confetti.removeFunc = elm => {
 		elm.style.opacity = 1
 	}, 5000);
 };</div>
-	<button class="demo-button" id="demo"><img src="cursor.svg"></button>
 	<div class="shj-lang-js shj-mode-noheader">const heart = new Image(),
 love = document.querySelector('#love');
 let confetti;
@@ -43,6 +42,9 @@ love.addEventListener('click', e => {
 	if (love.classList.toggle('love'))
 		confetti?.startAt?.(e.clientX, e.clientY);
 });</div>
+	<button class="demo-button" id="demo"><img src="cursor.svg"></button>
+	<button class="demo-button" id="love"><img src="cursor.svg"></button>
+	<button class="demo-button" id="star"><img src="cursor.svg"></button>
 	<script type="module">
 		import { highlightAll } from 'https://unpkg.com/speed_highlight_js/dist/index.js'
 		highlightAll();
