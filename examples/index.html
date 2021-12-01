@@ -38,18 +38,17 @@
 	</style>
 </head>
 <body>
+	<script src="../src/confetti.js"></script>
 	<h1>Confetti.js</h1>
 	<p>🎉 a simple confetti lib in js </p>
-	<button class="demo-button" id="demo">Hello</button>
-	<div class="shj-lang-js shj-mode-noheader">//create a instance of the class
-const confetti = new Confetti('demo');
-/*
-setting properties
-*/
-confetti.count = 75;
-confetti.size = 1;
-confetti.power = 25;
-confetti.removeFunc = elm => {
+	<button class="demo-button" id="demo">Demo</button>
+	<div class="shj-lang-js shj-mode-noheader">// create a instance of the class
+const demo = new Confetti('demo');
+demo.count = 75;
+demo.size = 1;
+demo.power = 25;
+// set up callback function for button removal
+demo.removeFunc = elm => {
 	elm.style.visibility = 'hidden';
 	elm.style.opacity = 0;
 	setTimeout(e => {
@@ -57,52 +56,56 @@ confetti.removeFunc = elm => {
 		elm.style.opacity = 1
 	}, 5000);
 };</div>
-	<button class="demo-button" id="love">Button</button>
-	<div class="shj-lang-js shj-mode-noheader">const heart = new Image(),
-	love = document.querySelector('#love');
-let confetti;
+	<script>
+// create a instance of the class
+const demo = new Confetti('demo');
+demo.count = 75;
+demo.size = 1;
+demo.power = 25;
+// set up callback function for button removal
+demo.removeFunc = elm => {
+	elm.style.visibility = 'hidden';
+	elm.style.opacity = 0;
+	setTimeout(e => {
+		elm.style.visibility = null;
+		elm.style.opacity = 1
+	}, 5000);
+};
+	</script>
+	<button class="demo-button" id="love">Like</button>
+	<div class="shj-lang-js shj-mode-noheader">const img = new Image(),
+	elm = document.querySelector('#love');
+const like = new Confetti();
 
-heart.onload = () => {
-	confetti = new Confetti();
-	confetti.canvas.style.zIndex = -1;
-	confetti.count = 25;
-	confetti.setImage(heart, 20, 20);
+img.onload = () => {
+	like.canvas.style.zIndex = -1;
+	like.count = 25;
+	like.setImage(img, 20, 20);
 }
+img.src = 'heart.png';
 
-heart.src = 'heart.png';
-love.addEventListener('click', e => {
-	if (love.classList.toggle('love'))
-		confetti?.startAt?.(e.clientX, e.clientY);
+elm.addEventListener('click', e => {
+	like.startAt(e.clientX, e.clientY);
 });</div>
-	<script src="../src/confetti.js"></script>
+	<script>
+const img = new Image(),
+	elm = document.querySelector('#love');
+const like = new Confetti();
+
+img.onload = () => {
+	like.canvas.style.zIndex = -1;
+	like.count = 25;
+	like.setImage(img, 20, 20);
+}
+img.src = 'heart.png';
+
+elm.addEventListener('click', e => {
+	like.startAt(e.clientX, e.clientY);
+});
+	</script>
 	<script type="module">
 		import { highlightAll } from 'https://unpkg.com/speed_highlight_js/dist/index.js'
 		highlightAll();
-		
-		const heart = new Image(),
-			loveElm = document.querySelector('#love');
-		let loveEffect;
-		heart.onload = () => {
-			loveEffect = new Confetti();
-			loveEffect.canvas.style.zIndex = -1;
-			loveEffect.count = 25;
-			loveEffect.setImage(heart, 20, 20);
-		}
-		heart.src = 'heart.png';
-		loveElm.addEventListener('click', e =>
-			loveElm.classList.toggle('love')
-				&& loveEffect?.startAt?.(e.clientX, e.clientY)
-		);
-
-		let confetti = new Confetti('demo');
-		confetti.count = 75;
-		confetti.size = 1;
-		confetti.power = 25;
-		confetti.removeFunc = elm => {
-			elm.style.visibility = 'hidden';
-			elm.style.opacity = 0;
-			setTimeout(e => (elm.style.visibility = null, elm.style.opacity = 1), 5000);
-		};
 	</script>
 </body>
 </html>
