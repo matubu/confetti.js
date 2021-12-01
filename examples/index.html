@@ -6,10 +6,41 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>confetti_js</title>
 	<link rel="stylesheet" href="https://unpkg.com/speed_highlight_js/dist/themes/atom-dark.css">
+	<style>
+		body {
+			margin: 20px;
+			background: #191A1F
+		}
+		h1 {
+			font-size: 64px;
+			background: linear-gradient(#F598AF, #B556EA);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin: 20px 0;
+		}
+		h1, p, button {
+			font-family: Arial;
+			color: #fff
+		}
+		button {
+			border: none;
+			outline: none;
+			font-size: 25px;
+			background: #AEC9F0;
+			color: #191A1F;
+			border-radius: 10px;
+			padding: 15px 20px;
+			margin: 0 auto;
+			transition: .25s
+		}
+		button:hover {border-radius: 20px}
+		button:active {background: #86A8DB}
+	</style>
 </head>
 <body>
-	<h1>confetti<em>.js</em></h1>
-	<p>fast small simple customizable</p>
+	<h1>Confetti.js</h1>
+	<p>🎉 a simple confetti lib in js </p>
+	<button class="demo-button" id="demo">Hello</button>
 	<div class="shj-lang-js shj-mode-noheader">//create a instance of the class
 const confetti = new Confetti('demo');
 /*
@@ -26,8 +57,9 @@ confetti.removeFunc = elm => {
 		elm.style.opacity = 1
 	}, 5000);
 };</div>
+	<button class="demo-button" id="love">Button</button>
 	<div class="shj-lang-js shj-mode-noheader">const heart = new Image(),
-love = document.querySelector('#love');
+	love = document.querySelector('#love');
 let confetti;
 
 heart.onload = () => {
@@ -42,9 +74,6 @@ love.addEventListener('click', e => {
 	if (love.classList.toggle('love'))
 		confetti?.startAt?.(e.clientX, e.clientY);
 });</div>
-	<button class="demo-button" id="demo"><img src="cursor.svg"></button>
-	<button class="demo-button" id="love"><img src="cursor.svg"></button>
-	<button class="demo-button" id="star"><img src="cursor.svg"></button>
 	<script src="../src/confetti.js"></script>
 	<script type="module">
 		import { highlightAll } from 'https://unpkg.com/speed_highlight_js/dist/index.js'
