@@ -1,2 +1,2 @@
-# confetti_js
+# confetti.js
 🎉 a simple confetti lib in js
